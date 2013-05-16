@@ -1,0 +1,4 @@
+# Pick the mirror that is nearest to you among the following ones:
+#
+#deb http://ftp.us.debian.org/debian/ squeeze main contrib non-free
+deb http://archive.debian.org/debian/ lenny contrib main non-free

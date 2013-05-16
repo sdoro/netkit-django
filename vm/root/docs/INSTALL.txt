@@ -1,0 +1,14 @@
+
+apt-get update
+apt-get -y --force-yes install python-dev
+
+apt-get update
+apt-get -y --force-yes install python-dev python-pip
+
+pip install virtualenv
+virtualenv ~/blog-venv
+source ~/blog-venv/bin/activate
+pip install django
+django-admin.py startproject microblog
+cd microblog/
+python manage.py runserver 0.0.0.0:8000
