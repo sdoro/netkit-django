@@ -5,11 +5,13 @@ apt-get -y --force-yes install python-dev
 apt-get update
 apt-get -y --force-yes install python-dev python-pip
 
-pip install virtualenv
+# pip list | grep virtualenv
+# pip install virtualenv
 virtualenv ~/blog-venv
 source ~/blog-venv/bin/activate
+# https_proxy="http://proxy.zuccante.it:8080/"
 pip install django==1.7
 django-admin.py startproject microblog
-python manage.py migrate
 cd microblog/
+python manage.py migrate
 python manage.py runserver 0.0.0.0:8000
