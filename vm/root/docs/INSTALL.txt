@@ -8,7 +8,8 @@ apt-get -y --force-yes install python-dev python-pip
 pip install virtualenv
 virtualenv ~/blog-venv
 source ~/blog-venv/bin/activate
-pip install django
+pip install django==1.7
 django-admin.py startproject microblog
+python manage.py migrate
 cd microblog/
 python manage.py runserver 0.0.0.0:8000
